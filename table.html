@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" rules="all">
+        <tr>
+            <th colspan="7">The error Rate on Different Forms</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Form name</th>
+            <th rowspan="2">A</th>
+            <th rowspan="2">B</th>
+            <th rowspan="2"> Total filed<br>(X = A * b)</th>
+            <th rowspan="2">Field With <br> errors (Y)</th>
+            <th colspan="2">Error Rate*(Y/X) * 100(%)</th>
+        </tr>
+        <tr>
+          <td>x/y</td>
+          <td>%age</td>
+        </tr>
+    
+        <tr>
+            <th>High Risk Errors</th>
+        </tr>
+    
+        <tr>
+            <td>Breast Pathology</td>
+            <td>48</td>
+            <td>733</td>
+            <td>35,184</td>
+            <td>188</td>
+            <td>0.0053</td>
+            <td>0.53</td>
+        </tr>
+        <tr>
+            <td>clinical follow-up</td>
+            <td>15</td>
+            <td>1115</td>
+            <td>16725</td>
+            <td>2</td>
+            <td>0.0001</td>
+            <td>0.01</td>
+        </tr>
+        <tr>
+            <td>Patient consent</td>
+            <td>11</td>
+            <td>379</td>
+            <td>4169</td>
+            <td>11</td>
+            <td>0.0026</td>
+            <td>0.26</td>
+        </tr>
+        <tr>
+            <th>Low Risk Errors</th>
+        </tr>
+        <tr>
+            <td>Demographics</td>
+            <td>20</td>
+            <td>348</td>
+            <td>6960</td>
+            <td>9</td>
+            <td>0.0013</td>
+            <td>0.13</td>
+        </tr>
+        <tr>
+            <td>Specimen
+                <br> Accession</td>
+            <td>28</td>
+            <td>667</td>
+            <td>18,676</td>
+            <td>63</td>
+            <td>0.0034</td>
+            <td>0.34</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>122</td>
+            <td>3242</td>
+            <td>81,714</td>
+            <td>273</td>
+            <td>0.0033</td>
+            <td>0.33</td>
+        </tr>
+</table>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Nested Table</h1>
+<table border="1" >
+    <tr>
+        <th>Header Column 1</th>
+        <th>Header Column 2</th>
+        <th>Header Column 3</th>
+        <th>Header Column 4</th>
+    </tr>
+    <tr>
+       <td>Row 2 -item 1</td> 
+       <td>Row 2 -item 2</td> 
+       <td rowspan="2"><b></br>Row 2 nested table 1<br><br></b>
+            <table border="1">
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>item</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>item</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>item</td>
+                </tr>
+            </table>
+            
+        </td>
+       <td>Row 2 -item 4 <br>A Second Line</td>
+    </tr>
+<tr>
+    <td><br><b>Row 3: Nested Table 2</b>
+    </br></br>
+        <table border="1">
+            <tr>
+                <th>Row 1 header</th>
+                <td>item</td>
+            </tr>
+            <tr>
+                <th>Row 2 header</th>
+                <td>item</td>
+            </tr>
+        
+        </table>
+    </td>
+    <td>Row 3- item 2</td>
+    <td rowspan="2">Row 3- item 2</td>
+</tr>
+
+<tr>
+    <td>Row 4 -item 1</td>
+    <td>Row 4 -item 2</td>
+    <td>Row 4 -item 3</td>
+</tr>
+<tr>
+<td colspan="4">Row 5 Last row of outer table</td>
+</tr>
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table border="1">
+    <tr>
+        <th style="color: red" colspan="4">Table using Colspan and Rowspan</th>
+    </tr>
+    <tr>
+        <th colspan="4">Khanewal Self Store</th>
+    </tr>
+    <tr>
+        <th>Item/Dese</th>
+        <th>QTY</th>
+        <th>Price/Unit</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>Sugger</td>
+        <td>5Kg</td>
+        <td>50</td>
+        <td>250</td>
+    </tr>
+    <tr>
+        <td>Cokking Oil</td>
+        <td>2Kg</td>
+        <td>200</td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>Soap</td>
+        <td>4 Pices</td>
+        <td>40</td>
+        <td>160</td>
+    </tr>
+    <tr>
+        <td colspan="3">sub total</td>
+        <td>810 </td>
+    </tr>
+    <tr>
+        <td colspan="2">tax</td><td>5%</td>
+        <td>41</td>
+    </tr>
+    <tr>
+    <td colspan="3">Total Bill</td>
+    <td>851</td>
+</tr>
+</table>
+</body>
+</html>
