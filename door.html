@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(85, 185, 100);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .main {
+            position: relative;
+            height: 300px;
+            width: 300px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .left {
+            background-color: black;
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 5s;
+            transform-origin: left ;
+        }
+
+        .left:hover {
+            transform: rotatey(10turn);
+            transform: perspective(600px) rotatey(-90deg);
+
+        }
+
+        .right {
+            background-color: black;
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: all 2s;
+            transform-origin:right;
+        }
+
+        .right:hover {
+            transform: rotatey(10turn);
+            transform: perspective(600px) rotatey(90deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="Tiger.jpeg" alt="">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
