@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(232, 237, 241);
+
+        }
+
+        .top {
+            display: flex;
+            margin: 50px;
+            flex-direction: row;
+            gap: 100px;
+            height: 100vh;
+        }
+
+        .middle {
+            display: flex;
+            margin: 50px;
+            flex-direction: row;
+            gap: 100px;
+            height: 100vh;
+            margin-top: -500px;
+        }
+
+        img {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .main {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .layer {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .layer:hover {
+            transform: rotate(45deg);
+        }
+
+        .main2 {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .layer2 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            width: 150px;
+            top: 0;
+            left: 0;
+        }
+
+        .layer2:hover {
+            transform: rotatex(45deg);
+        }
+
+        .rotatey {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .y {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .y:hover {
+            transform: rotatey(45deg);
+        }
+
+        .rotatez {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .z {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .z:hover {
+            transform: rotatez(45deg);
+        }
+
+        .scale {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scale2 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .scale2:hover {
+            transform: scale(2);
+        }
+
+        .scalex {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scalex2 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .scalex2:hover {
+            transform: scalex(2);
+        }
+
+        .scaley {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scaley2 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .scaley2:hover {
+            transform: scaley(2);
+        }
+
+        .skew {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .sk {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .sk:hover {
+            transform: skewx(45deg);
+        }
+
+        .skewy {
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .sky {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .sky:hover {
+            transform: skewy(45deg);
+        }
+
+        .translate {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .tra {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .tra:hover {
+            transform: translatex(45px);
+        }
+
+        .translatey {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .tray {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .tray:hover {
+            transform: translatey(45px);
+        }
+
+        .perspective {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .perspective100x {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+        }
+
+        .perspective100x:hover {
+            transform: perspective(100px) rotatex(90deg);
+        }
+
+        .bottem {
+            display: flex;
+            margin: 50px;
+            flex-direction: row;
+            gap: 100px;
+            height: 100vh;
+            margin-top: -500px;
+            justify-content: center;
+
+        }
+
+        .perspectivey {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .perspective100y {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+        }
+
+        .perspective100y:hover {
+            transform: perspective(100px) rotatey(45deg);
+        }
+
+        .perspectivex {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .perspective200x {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+        }
+
+        .perspective200x:hover {
+            transform: perspective(200px) rotatex(90deg);
+        }
+
+        .perspectivey2 {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .perspective200y {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+        }
+
+        .perspective200y:hover {
+            transform: perspective(200px) rotatey(45deg);
+        }
+
+        .transform-origin {
+            display: flex;
+            margin: 50px;
+            flex-direction: row;
+            gap: 150px;
+            height: 100vh;
+        }
+
+        .origin1 {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .rotateorigin1 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 100% 0 0;
+        }
+
+        .rotateorigin1:hover {
+            transform: rotate(45deg);
+        }
+
+        .origin1y {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .rotateorigin1y {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 100% 0 0;
+        }
+
+        .rotateorigin1y:hover {
+            transform: rotatey(45deg);
+        }
+
+        .origin0 {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .rotateorigin0 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 0 100% 0;
+        }
+
+        .rotateorigin0:hover {
+            transform: rotate(45deg);
+        }
+
+        .origin0x {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .rotateorigin0x {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 0 100% 0;
+        }
+
+        .rotateorigin0x:hover {
+            transform: rotatex(45deg);
+        }
+
+        .origin0y {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .rotateorigin0y {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 0 100% 0;
+        }
+
+        .rotateorigin0y:hover {
+            transform: rotatey(45deg);
+        }
+
+        .transform-origin1 {
+            display: flex;
+            margin: 50px;
+            flex-direction: row;
+            gap: 150px;
+            height: 100vh;
+            margin-top: -500px;
+            justify-content: center;
+        }
+
+        .scale1 {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scale12 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 100% 0 0;
+        }
+
+        .scale12:hover {
+            transform: scale(2);
+        }
+
+        .scale1x {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scale12x {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 100% 0 0;
+        }
+
+        .scale12x:hover {
+            transform: scalex(2);
+        }
+
+        .scale1y {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scale12y {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 100% 0 0;
+        }
+
+        .scale12y:hover {
+            transform: scaley(2);
+        }
+
+        .transform-origin2 {
+            display: flex;
+            margin: 50px;
+            flex-direction: row;
+            gap: 150px;
+            height: 100vh;
+            margin-top: -500px;
+            justify-content: center;
+        }
+
+        .scale0 {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scale02 {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 0 100% 0;
+        }
+
+        .scale02:hover {
+            transform: scale(2);
+        }
+
+        .scale0x {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scale02x {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 0 100% 0;
+        }
+
+        .scale02x:hover {
+            transform: scalex(2);
+        }
+
+        .scale0y {
+
+            position: relative;
+            width: 150px;
+            height: 200px;
+
+        }
+
+        .scale02y {
+            background-color: rgb(160, 199, 234);
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 0;
+            width: 150px;
+            transition: all 2s;
+            transform-origin: 0 100% 0;
+        }
+
+        .scale02y:hover {
+            transform: scaleY(2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="main">
+            <img src="1.jfif" alt="">
+            <div class="layer"></div>
+        </div>
+
+        <div class="main2">
+            <img src="4.jfif" alt="">
+            <div class="layer2"></div>
+        </div>
+
+
+        <div class="rotatey">
+            <img src="1.jfif" alt="">
+            <div class="y"></div>
+        </div>
+
+
+        <div class="rotatez">
+            <img src="1.jfif" alt="">
+            <div class="z"></div>
+        </div>
+
+        <div class="scale">
+            <img src="1.jfif" alt="">
+            <div class="scale2"></div>
+        </div>
+
+        <div class="scalex">
+            <img src="1.jfif" alt="">
+            <div class="scalex2"></div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="scaley">
+            <img src="1.jfif" alt="">
+            <div class="scaley2"></div>
+        </div>
+        <div class="skew">
+            <img src="1.jfif" alt="">
+            <div class="sk"></div>
+        </div>
+        <div class="skewy">
+            <img src="1.jfif" alt="">
+            <div class="sky"></div>
+        </div>
+        <div class="translate">
+            <img src="30.jfif" alt="">
+            <div class="tra"></div>
+        </div>
+        <div class="translatey">
+            <img src="30.jfif" alt="">
+            <div class="tray"></div>
+        </div>
+
+        <div class="perspective">
+            <img src="30.jfif" alt="">
+            <div class="perspective100x"></div>
+        </div>
+    </div>
+
+    <div class="bottem">
+        <div class="perspectivey">
+            <img src="30.jfif" alt="">
+            <div class="perspective100y"></div>
+        </div>
+        <div class="perspectivex">
+            <img src="30.jfif" alt="">
+            <div class="perspective200x"></div>
+        </div>
+        <div class="perspectivey2">
+            <img src="30.jfif" alt="">
+            <div class="perspective200y"></div>
+        </div>
+    </div>
+    <p style="text-align:center; margin-top:-500px; text-transform: uppercase; font-size:20px">transform-origin</p>
+
+    <div class="transform-origin">
+        <div class="origin1">
+            <img src="30.jfif" alt="">
+            <div class="rotateorigin1"></div>
+        </div>
+        <div class="origin1y">
+            <img src="30.jfif" alt="">
+            <div class="rotateorigin1y"></div>
+        </div>
+        <div class="origin0">
+            <img src="4.jfif" alt="">
+            <div class="rotateorigin0"></div>
+        </div>
+        <div class="origin0x">
+            <img src="4.jfif" alt="">
+            <div class="rotateorigin0x"></div>
+        </div>
+        <div class="origin0y">
+            <img src="4.jfif" alt="">
+            <div class="rotateorigin0y"></div>
+        </div>
+
+    </div>
+    <div class="transform-origin1">
+        <div class="scale1">
+            <img src="4.jfif" alt="">
+            <div class="scale12"></div>
+        </div>
+        <div class="scale1x">
+            <img src="4.jfif" alt="">
+            <div class="scale12x"></div>
+        </div>
+        <div class="scale1y">
+            <img src="4.jfif" alt="">
+            <div class="scale12y"></div>
+        </div>
+    </div>
+    <div class="transform-origin2">
+        <div class="scale0">
+            <img src="4.jfif" alt="">
+            <div class="scale02"></div>
+        </div>
+        <div class="scale0x">
+            <img src="4.jfif" alt="">
+            <div class="scale02x"></div>
+        </div>
+        <div class="scale0y">
+            <img src="4.jfif" alt="">
+            <div class="scale02y"></div>
+        </div>
+    </div>
+</body>
+
+</html>
