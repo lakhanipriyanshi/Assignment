@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .p1 {
+            color: rgb(226, 76, 96);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 50px;
+            margin-top: 100px;
+            animation-name: rotate;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate {
+            0% {
+                top: 0%;
+                left: 20%;
+            }
+
+            40% {
+                top: 50%;
+                left: 40%;
+            }
+
+            80% {
+                top: 20%;
+                left: 80%;
+            }
+        }
+
+        .p2 {
+            color: rgb(255, 139, 193);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 500px;
+            margin-top: 500px;
+            animation-name: rotate2;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate2 {
+            0% {
+                top: 0%;
+                left: 20%;
+            }
+
+            20% {
+                top: 20%;
+                left: 40%;
+            }
+
+            40% {
+                top: 0%;
+                left: 60%;
+            }
+        }
+
+        .p3 {
+            color: rgb(77, 210, 53);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 300px;
+            margin-top: 0px;
+            animation-name: rotate3;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate3 {
+            0% {
+                top: 0%;
+                left: 20%;
+            }
+
+            20% {
+                top: 40%;
+                right: 80%;
+            }
+
+            40% {
+                top: 0%;
+                left: 60%;
+            }
+
+            60% {
+                top: 30%;
+                left: 30%;
+            }
+        }
+
+        .p4 {
+            color: rgb(226, 133, 76);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 300px;
+            margin-top: 300px;
+            animation-name: rotate4;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate4 {
+            0% {
+                top: 0%;
+                left: 20%;
+            }
+
+            20% {
+                top: 50%;
+                left: 40%;
+            }
+
+            60% {
+                top: 20%;
+                left: 40%;
+            }
+
+            80% {
+                top: 0%;
+                left: 30%;
+            }
+        }
+
+        .p5 {
+            color: rgb(224, 19, 125);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 200px;
+            margin-top: 500px;
+            animation-name: rotate5;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate5 {
+            0% {
+                top: 0%;
+                left: 0%;
+            }
+
+            20% {
+                top: 20%;
+                left: 20%;
+            }
+
+            60% {
+                top: 25%;
+                left: 25%;
+            }
+
+            80% {
+                top: 0%;
+                left: 25%;
+            }
+        }
+
+        .p6 {
+            color: rgb(224, 204, 19);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 1000px;
+            margin-top: 100px;
+            animation-name: rotate6;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate6 {
+            0% {
+                top: 0%;
+                left: -40%;
+            }
+
+            20% {
+                top: 50%;
+                left: -40%;
+            }
+
+            40% {
+                top: 40%;
+                left: -20%;
+            }
+
+            60% {
+                top: 20%;
+                left: -20%;
+            }
+
+            80% {
+                top: 0%;
+                left: 0%;
+            }
+        }
+
+        .p7 {
+            color: rgb(143, 136, 5);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 1100px;
+            margin-top: 500px;
+            animation-name: rotate7;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate7 {
+            0% {
+                top: 0%;
+                right: 20%;
+            }
+
+            20% {
+                bottom: 40%;
+                right: 40%;
+            }
+
+            40% {
+                bottom: 60%;
+                right: 80%;
+            }
+
+            60% {
+                bottom: 80%;
+                right: 10%
+            }
+        }
+
+        .p8 {
+            color: rgb(19, 180, 224);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 1300px;
+            margin-top: 650px;
+            animation-name: rotate8;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes rotate8 {
+            0% {
+                top: 0%;
+                right: 20%;
+            }
+
+            20% {
+                bottom: 60%;
+                right: 50%;
+            }
+
+            40% {
+                bottom: 40%;
+                right: 60%;
+            }
+
+            60% {
+                bottom: 80%;
+                right: 30%
+            }
+        }
+
+        .p9 {
+            color: rgb(204, 186, 201);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 1300px;
+            margin-top: 0px;
+            animation-name: rotate9;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+        @keyframes rotate9 {
+            0% {
+                top: 0%;
+                right: 20%;
+            }
+
+            20% {
+                bottom: 40%;
+                right: 40%;
+            }
+
+            40% {
+                bottom: 50%;
+                right: 70%;
+            }
+
+            60% {
+                bottom: 90%;
+                right: 40%
+            }
+            100%{
+                bottom:70%;
+                right:70%;
+            }
+        }
+        .p10 {
+            color: rgb(226, 226, 239);
+            font-size: 50px;
+            position: absolute;
+            margin-left: 1400px;
+            margin-top: 400px;
+            animation-name: rotate9;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+        @keyframes rotate4 {
+            0% {
+                top: 0%;
+                left: 20%;
+            }
+
+            20% {
+                top: 50%;
+                right: 100%;
+            }
+
+            60% {
+                top: 20%;
+                right: 60%;
+            }
+
+            80% {
+                top: 0%;
+                right:40%
+            }
+            100%{
+                top:20%;
+                right:80%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="p1">1</div>
+        <div class="p2">2</div>
+        <div class="p3">3</div>
+        <div class="p4">4</div>
+        <div class="p5">5</div>
+        <div class="p6">6</div>
+        <div class="p7">7</div>
+        <div class="p8">8</div>
+        <div class="p9">9</div>
+        <div class="p10">10</div>
+    </div>
+</body>
+
+</html>
